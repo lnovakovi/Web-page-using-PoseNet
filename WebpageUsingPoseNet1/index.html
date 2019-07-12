@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Quiz</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Answer the question by moving your hand </h1>
+    </div>
+    <button id="start">
+        PRESS TO START THE QUIZ
+    </button>
+    <div id='main' style='display: none;' >
+        <video id="video" playsinline style=" -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        display: none;
+        ">
+        </video>
+        <canvas id="output" />  
+        
+   </div>  
+   <div class="question-div" style="display: none;">
+    <div id="question">QUESTION</div>
+    </div>
+    <img src="img/mouse.png" id="mouse-pointer" style="top:40%; left: 40%;"/>
+    <div id ="quiz" style="display: none;">
+        <div class="options">
+            <button id="answer-one" >A1</button>
+            <button id="answer-two" >A2</button>
+        </div>  
+        <div id="answerNote" style="display: none;"></div>
+    </div>
+    <div id="scoreContainer" style="display: none">;
+
+    </div>
+   
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script> 
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/posenet@1.0.3"></script> 
+
+    
+    <script src="script.js"></script>
+    <script src="demo_util.js"></script>
+
+</body>
+</html>
